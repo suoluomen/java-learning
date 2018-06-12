@@ -41,7 +41,7 @@ class TaskWithResult implements Callable<String> {
     public TaskWithResult(int id) {
         this.id = id;
     }
-
+    /*多线程回调接口*/
     @Override
     public String call() throws Exception {
         return "result of TaskWithResult  " + id;

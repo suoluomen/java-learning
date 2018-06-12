@@ -31,6 +31,13 @@ public class Run4_waitHasParam2 {
                 System.out.println("notify begin timer=" + System.currentTimeMillis());
                 lock.notify();
                 System.out.println("notify end timer=" + System.currentTimeMillis());
+//                try {
+//                    Thread.sleep(1000);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+                /*测试表明notify唤醒，在对象结束后再执行*/
+
             }
 
         }

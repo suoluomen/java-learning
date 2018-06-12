@@ -23,6 +23,7 @@ public class Run2_notify {
             Thread2 t2 = new Thread2(lock);
             t2.start();
         } catch (InterruptedException e) {
+            /*获取线程终端异常，并打印出异常信息*/
             e.printStackTrace();
         }
 

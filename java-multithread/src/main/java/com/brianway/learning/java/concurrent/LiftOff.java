@@ -4,6 +4,7 @@ package com.brianway.learning.java.concurrent;
  * Created by brian on 16/11/30.
  */
 public class LiftOff implements Runnable {
+    /*多线程实现Runnable接口*/
     protected int countDown = 10;
     private static int taskCount = 0;
     private final int id = taskCount++;

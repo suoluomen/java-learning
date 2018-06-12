@@ -9,6 +9,7 @@ import java.util.concurrent.Executors;
 public class CachedThreadPool {
     public static void main(String[] args) {
         ExecutorService exec = Executors.newCachedThreadPool();
+        /*创建线程池，加载线程*/
         for (int i = 0; i < 5; i++) {
             exec.execute(new LiftOff());
         }

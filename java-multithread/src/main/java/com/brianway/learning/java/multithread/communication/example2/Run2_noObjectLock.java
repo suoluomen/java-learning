@@ -9,6 +9,7 @@ package com.brianway.learning.java.multithread.communication.example2;
  * 没有“对象监视器”，调用wait()方法出现运行时异常
  */
 public class Run2_noObjectLock {
+    /*没有对象监视器，调用wait报错*/
     public static void main(String[] args) {
         String s = new String("");
         try {

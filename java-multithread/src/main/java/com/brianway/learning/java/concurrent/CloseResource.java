@@ -14,9 +14,9 @@ import java.util.concurrent.TimeUnit;
 public class CloseResource {
     public static void main(String[] args) throws Exception {
         ExecutorService exec = Executors.newCachedThreadPool();
-        ServerSocket server = new ServerSocket(8080);
+        ServerSocket server = new ServerSocket(8089);
         InputStream socketInput =
-                new Socket("localhost", 8080).getInputStream();
+                new Socket("localhost", 8089).getInputStream();
         exec.execute(new IOBlocked(socketInput));
         exec.execute(new IOBlocked(System.in));
         TimeUnit.MILLISECONDS.sleep(100);

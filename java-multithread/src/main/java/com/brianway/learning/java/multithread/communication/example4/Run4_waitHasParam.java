@@ -25,6 +25,7 @@ public class Run4_waitHasParam {
     };
 
     public static void main(String[] args) {
+        /*使用Runnable接口*/
         Thread t = new Thread(runnable1);
         t.start();
     }

@@ -10,11 +10,10 @@ public class Subtract {
         super();
         this.lock = lock;
     }
-
     public void subtract() {
         try {
             synchronized (lock) {
-                //while(ValueObject.list.size() == 0){
+//                while(ValueObject.list.size() == 0){
                 if (ValueObject.list.size() == 0) {
                     System.out.println("begin wait(),ThreadName=" + Thread.currentThread().getName());
                     lock.wait();

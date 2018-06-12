@@ -14,11 +14,11 @@ public class NotifyThread2 extends Thread {
     @Override
     public void run() {
         synchronized (lock) {
+            /*唤醒多次*/
             lock.notify();
             lock.notify();
             lock.notify();
             lock.notify();
-
         }
     }
 }
