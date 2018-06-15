@@ -11,12 +11,12 @@ public class MyStack {
 
     synchronized public void push() {
         try {
-            if (list.size() == 1) {
+            while (list.size() == 1) {
                 System.out.println("push操作中的： " + Thread.currentThread().getName() + " 线程呈wait状态");
                 this.wait();
             }
             list.add(Math.random());
-            this.notify();
+            this.notifyAll();
             System.out.println("push = " + list.size());
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -26,13 +26,13 @@ public class MyStack {
     synchronized public String pop() {
         String returnValue = "";
         try {
-            if (list.size() == 0) {
+            while (list.size() == 0) {
                 System.out.println("pop操作中的： " + Thread.currentThread().getName() + " 线程呈wait状态");
                 this.wait();
             }
             returnValue = list.get(0) + "  " + Thread.currentThread().getName();
             list.remove(0);
-            this.notify();
+            this.notifyAll();
             System.out.println("pop = " + list.size() + "  Mystack的pop方法中 线程" + Thread.currentThread().getName());
         } catch (InterruptedException e) {
             e.printStackTrace();

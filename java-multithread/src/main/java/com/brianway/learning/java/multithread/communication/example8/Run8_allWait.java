@@ -26,12 +26,18 @@ public class Run8_allWait {
         }
 
         Thread.sleep(5000);
-        Thread[] threads = new Thread[Thread.currentThread().getThreadGroup().activeCount()];
+
+        int num=Thread.currentThread().getThreadGroup().activeCount();
+        System.out.println("num"+num);
+        Thread[] threads = new Thread[num];
         Thread.currentThread().getThreadGroup().enumerate(threads);
         for (int i = 0; i < threads.length; i++) {
             System.out.println(threads[i].getName() + " " + threads[i].getState());
         }
-
+        for (int i = 0; i < 2; i++) {
+            pThread[i].interrupt();
+            cThread[i].interrupt();
+        }
     }
 }
 
