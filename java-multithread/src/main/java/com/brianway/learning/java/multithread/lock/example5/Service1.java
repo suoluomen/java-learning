@@ -11,6 +11,7 @@ public class Service1 {
     public void serviceMethod1() {
         try {
             lock.lock();
+            /*查询锁定的次数getHoldCount*/
             System.out.println("serviceMethod1 getHoldCount=" + lock.getHoldCount());
             serviceMethod2();
         } finally {
