@@ -41,6 +41,7 @@ class SimpleProxyDemo {
     }
 
     public static void main(String[] args) {
+        /*工厂模式，调用一个接口，但是接口有不同的实现类*/
         consumer(new RealObject());
         consumer(new SimpleProxy(new RealObject()));
     }

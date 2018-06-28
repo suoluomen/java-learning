@@ -32,6 +32,7 @@ public class FilledList<T> {
 
     public static void main(String[] args) {
         FilledList<CountedInteger> fl =
+                /*根据class获取对应的类*/
                 new FilledList<CountedInteger>(CountedInteger.class);
         System.out.println(fl.create(15));
     }

@@ -26,6 +26,8 @@ public class GenericWriting {
 
     static void f2() {
         writeWithWildcard(apples, new Apple());
+        /*super表示某个类的父类*/
+        /*extends表示某个类的子类*/
         writeWithWildcard(fruit, new Apple());
     }
 

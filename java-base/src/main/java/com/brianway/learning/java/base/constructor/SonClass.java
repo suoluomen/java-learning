@@ -16,7 +16,7 @@ public class SonClass extends FatherClass {
     }
 
     public SonClass(String name) {
-        //super(name);
+//        super(name);
         System.out.println("执行了子类的构造方法SonClass(String name) " + name);
     }
 

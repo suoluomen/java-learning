@@ -25,15 +25,19 @@ public class CovariantArrays {
 }
 
 class Fruit {
+    public int F;
 }
 
 class Apple extends Fruit {
+    public int A;
 }
 
 class Jonathan extends Apple {
+    public int J;
 }
 
 class Orange extends Fruit {
+    public int O;
 }
 
 /* Output:

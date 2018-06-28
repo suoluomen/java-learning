@@ -8,8 +8,8 @@ public class GenericClassReferences {
 
         Class intClass = int.class;
         intClass = double.class;
-        // genericIntClass = double.class; // Illegal
-
+//         genericIntClass = double.class; // Illegal
+//        Class<Double> genericDoubleClass = double.class;
         System.out.println(int.class == Integer.class);
     }
 } ///:~
